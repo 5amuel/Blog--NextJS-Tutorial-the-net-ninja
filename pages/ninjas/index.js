@@ -12,22 +12,22 @@ export const getStaticProps = async () => {
 }
 
 const Ninjas = ({ ninjas }) => {
-    return (
-      <div>
-        <h1>All Ninjas</h1>
-        {ninjas.map(ninja => (
-          <Link href={'/ninjas/' + ninja.id} key={ninja.id}>
-            <a className={styles.single}>
-              <h3>{ ninja.name }</h3>
-            </a>
-          </Link >
-       
-            
-        
-        ))}
+  return (
+    <div>
+      <h1>All Ninjas</h1>
+      {ninjas.map(ninja => (
+        <Link href={'/ninjas/' + ninja.id} key={ninja.id}>
+          <a className={styles.single}>
+            <h3>{ ninja.name }</h3>
+          </a>
+        </Link >
+    
+          
+      
+      ))}
 
-      </div>
-    );
-  }
+    </div>
+  );
+}
    
   export default Ninjas;
